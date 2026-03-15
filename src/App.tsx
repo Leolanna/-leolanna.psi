@@ -381,7 +381,7 @@ export default function App() {
       <footer className="px-[6vw] py-10 border-t border-ambar/20 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div>
           <div className="text-dourado font-serif text-sm mb-2">@leolanna.psi</div>
-          <div className="text-texto-muted text-[0.68rem] tracking-wider">Léo Lanna · Mentor de Líderes em Autogestão Psicossocial · Belo Horizonte, MG</div>
+          <div className="text-texto-muted text-[0.68rem] tracking-wider">© 2026 Léo Lanna · Mentor de Líderes em Autogestão Psicossocial · Belo Horizonte, MG</div>
         </div>
         <div className="flex gap-8">
           <a href="https://www.linkedin.com/in/leolannapsi/" target="_blank" rel="noopener noreferrer" className="text-texto-muted hover:text-dourado transition-colors" aria-label="LinkedIn">
