@@ -265,19 +265,20 @@ export default function App() {
         {/* About */}
         <section id="sobre" className="px-[6vw] py-16 md:py-28 bg-carvao-dark">
           <div className="max-w-[960px] mx-auto grid md:grid-cols-[1fr_1.4fr] gap-12 md:gap-24 items-start">
-            <Reveal>
               <div className="relative group">
                 <img
                   src="/leo.jpg"
                   alt="Léo Lanna — Psicólogo do Trabalho e Mentor de Líderes"
-                  className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl"
+                  className="w-full border border-ambar/15 shadow-2xl block"
+                  loading="eager"
+                  style={{ minHeight: '300px', backgroundColor: '#1a1a1a' }}
                   onError={(e) => {
-                    console.error("Erro ao carregar a imagem /leo.jpg. Verifique se o arquivo existe na pasta public do GitHub.");
+                    console.error("Erro ao carregar a imagem leo.jpg");
+                    (e.target as HTMLImageElement).src = "https://picsum.photos/seed/leo/800/1000?grayscale";
                   }}
                 />
                 <span className="block mt-4 text-[0.65rem] tracking-widest uppercase text-ambar">Léo Lanna</span>
               </div>
-            </Reveal>
             <article>
               <Reveal>
                 <span className="text-[0.65rem] tracking-[0.2em] uppercase text-ambar mb-5 block">Sobre Léo Lanna</span>
