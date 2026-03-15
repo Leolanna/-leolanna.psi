@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import leoImg from './assets/perfil-leo.jpg';
 import { Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { CookieConsent } from './components/CookieConsent';
 
@@ -269,16 +268,16 @@ export default function App() {
             <Reveal>
               <div className="relative group">
                 <img
-                  src={leoImg}
+                  src="/perfil-leo.jpg"
                   alt="Léo Lanna — Psicólogo do Trabalho e Mentor de Líderes"
                   className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl block"
                   loading="eager"
                   onError={(e) => {
-                    console.error("Erro ao carregar a imagem leo.jpg");
-                    // Se falhar, tenta o caminho absoluto como segunda opção
+                    console.error("Erro ao carregar a imagem perfil-leo.jpg");
                     const target = e.target as HTMLImageElement;
-                    if (target.src !== window.location.origin + "/perfil-leo.jpg") {
-                      target.src = "/perfil-leo.jpg";
+                    // Tenta adicionar um cache buster se falhar
+                    if (!target.src.includes('?v=')) {
+                      target.src = "/perfil-leo.jpg?v=" + new Date().getTime();
                     }
                   }}
                 />
