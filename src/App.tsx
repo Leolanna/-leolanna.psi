@@ -268,9 +268,12 @@ export default function App() {
             <Reveal>
               <div className="relative group">
                 <img
-                  src="/leo-lanna.jpg?v=3"
+                  src="/leo.jpg"
                   alt="Léo Lanna — Psicólogo do Trabalho e Mentor de Líderes"
                   className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl"
+                  onError={(e) => {
+                    console.error("Erro ao carregar a imagem /leo.jpg. Verifique se o arquivo existe na pasta public do GitHub.");
+                  }}
                 />
                 <span className="block mt-4 text-[0.65rem] tracking-widest uppercase text-ambar">Léo Lanna</span>
               </div>
