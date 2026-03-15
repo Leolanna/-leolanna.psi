@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { CookieConsent } from './components/CookieConsent';
+import perfilImg from './assets/perfil-leo.jpeg';
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -268,7 +269,7 @@ export default function App() {
             <Reveal>
               <div className="relative group">
                 <img
-                  src="/perfil-leo.jpeg"
+                  src={perfilImg}
                   alt="Léo Lanna — Psicólogo do Trabalho e Mentor de Líderes"
                   className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl block"
                   loading="eager"
@@ -277,7 +278,7 @@ export default function App() {
                     const target = e.target as HTMLImageElement;
                     // Tenta adicionar um cache buster se falhar
                     if (!target.src.includes('?v=')) {
-                      target.src = "/perfil-leo.jpeg?v=" + new Date().getTime();
+                      target.src = perfilImg + "?v=" + new Date().getTime();
                     }
                   }}
                 />
