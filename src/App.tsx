@@ -271,11 +271,11 @@ export default function App() {
                   src="/leo-lanna.jpg"
                   alt="Léo Lanna — Psicólogo do Trabalho e Mentor de Líderes"
                   className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl"
-                  referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800";
-                    target.onerror = null;
+                    if (!target.src.includes('unsplash')) {
+                      target.src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800";
+                    }
                   }}
                 />
                 <span className="block mt-4 text-[0.65rem] tracking-widest uppercase text-ambar">Léo Lanna</span>
