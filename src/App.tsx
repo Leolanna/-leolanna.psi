@@ -268,16 +268,16 @@ export default function App() {
             <Reveal>
               <div className="relative group">
                 <img
-                  src="/perfil-leo.jpg"
+                  src="/perfil-leo.jpeg"
                   alt="Léo Lanna — Psicólogo do Trabalho e Mentor de Líderes"
                   className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl block"
                   loading="eager"
                   onError={(e) => {
-                    console.error("Erro ao carregar a imagem perfil-leo.jpg");
+                    console.error("Erro ao carregar a imagem perfil-leo.jpeg");
                     const target = e.target as HTMLImageElement;
                     // Tenta adicionar um cache buster se falhar
                     if (!target.src.includes('?v=')) {
-                      target.src = "/perfil-leo.jpg?v=" + new Date().getTime();
+                      target.src = "/perfil-leo.jpeg?v=" + new Date().getTime();
                     }
                   }}
                 />
