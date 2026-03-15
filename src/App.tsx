@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Linkedin, Instagram, MessageCircle } from 'lucide-react';
+import { CookieConsent } from './components/CookieConsent';
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -392,6 +393,7 @@ export default function App() {
           </a>
         </div>
       </footer>
+      <CookieConsent />
     </div>
   );
 }
