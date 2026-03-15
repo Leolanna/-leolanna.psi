@@ -1,0 +1,1 @@
+Este arquivo garante que a pasta public exista. Você pode apagar este arquivo depois de subir sua foto leo-lanna.jpg para esta mesma pasta.
