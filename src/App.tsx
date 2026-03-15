@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { CookieConsent } from './components/CookieConsent';
-import perfilImg from './assets/perfil-leo.jpeg';
+import perfilImg from './assets/perfil-leo.jpg';
 
 const Reveal = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -274,7 +274,7 @@ export default function App() {
                   className="w-full grayscale contrast-110 brightness-100 border border-ambar/15 shadow-2xl block"
                   loading="eager"
                   onError={(e) => {
-                    console.error("Erro ao carregar a imagem perfil-leo.jpeg");
+                    console.error("Erro ao carregar a imagem perfil-leo.jpg");
                     const target = e.target as HTMLImageElement;
                     // Tenta adicionar um cache buster se falhar
                     if (!target.src.includes('?v=')) {
